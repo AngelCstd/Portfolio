@@ -1,0 +1,77 @@
+/*MOBILE*/
+/*Barra de navegación*/
+header.menu__header {
+    position: fixed;
+    top: 0;
+    padding: .7rem 1rem;
+    z-index: 10;
+    width: 100vw;
+    view-timeline-name: --reveal;
+    animation-name: scrollHeader;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range-start: contain 100%;
+}
+
+@keyframes scrollHeader{
+    from{
+        background-color: transparent;
+    } 
+    to{
+        background-color: var(--color-negro);
+    }
+}
+
+/*La barra de navegación*/
+header.menu__header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Nombre principal y logo*/
+a.menu__nombre{
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    font-size: 1.3rem;
+}
+
+/*Lista de links*/
+header.menu__header ul {
+    display: none;
+}
+
+/*Boton con Icono de menu*/
+.drawerTrigger{
+    background-color: transparent;
+    border: none;
+}
+
+/*TABLET*/
+@media (width > 470px) {
+    /*Desaparecemos iconos*/
+    .drawerTrigger {
+        display: none;
+    }
+
+    /*Lista de links*/
+    header.menu__header ul {
+        display: flex;
+        gap: 1.3rem;
+        justify-content: flex-end;
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
+
+/*PC - Barra de navegacion*/
+@media (width > 650px) {
+    header.menu__header{
+        padding: 1rem 2rem;
+    }
+    header.menu__header ul{
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,332 @@
+/*Mobile - Proyectos*/
+.proyectos {
+    min-height: 80vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+section.proyectos .container {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+section.proyectos .container>h1{
+    align-self: flex-start;
+    font-size: 2.5rem;
+}
+.tecnologias__list {
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    position: relative;
+    margin-top: 2rem;
+}
+.tecnologias__list::before{
+    content: "Tecnologias usadas:";
+    position: absolute;
+    top: -2rem;
+    font-size: 12px;
+}
+.tecnologias__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tecnologias__item img{
+    width: 60px;
+}
+.tecnologias__item img:hover{
+    transform: scale(90%);
+    filter: brightness(80%);
+    transition: all .2s ease;
+}
+.tecnologias__item p{
+    font-size: 12px;
+}
+.botones {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.botones a{
+    padding: 1rem;
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    border-radius: 20px;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.588);
+    transition: opacity .2s ease, transform .2s ease;
+}
+.botones a:last-child {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+}
+.botones a:hover{
+    transform: scale(90%);
+    opacity: 80%;
+}
+.pantallaMuestra {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+}
+.fondo__azul {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+}
+.fondo__azul .botones a:first-child {
+    background-color: var(--color-blanco);
+    color: var(--color-azul);
+}
+@media (width > 465px) {
+    .proyectos {
+        padding: 2rem;
+    }
+}
+@media (width > 765px) {
+    .pantallaMuestra{
+        width: 50%;
+        max-width: 400px;
+    }
+    section.proyectos .container {
+        max-width: 500px;
+    }
+    .proyectos {
+        flex-direction: row;
+    }
+    .fondo__azul {
+        flex-direction: row-reverse;
+    }
+}
+
+/*******************************************************/
+/*Mobile - Resume*/
+section.resume {
+    background: var(--color-azul);
+    color: var(--color-blanco);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 8rem .5rem 1rem;
+    overflow: hidden;
+    height: auto;
+}
+section.resume>h1 {
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-blanco);
+    position: absolute;
+    top: -2rem;
+    right: -3rem;
+    z-index: 0;
+}
+section.resume>h1::before {
+    content: "RESUMEN";
+    position: absolute;
+    bottom: -4.3rem;
+    left: 0;
+    z-index: -1;
+}
+/*Tablet Vertical - Resumen*/
+@media (width > 540px) {
+    section.resume {
+        padding: 3rem 1rem 1rem;
+    }
+
+    section.resume>h1 {
+        top: -3rem;
+        right: -1rem;
+    }
+}
+/*PC - Resumen*/
+@media (width > 765px) {
+    section.resume {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+/*Pantallas grandes - Resumen*/
+@media (width > 900px) {
+    section.resume {
+        padding: 3rem 3rem 1rem;
+    }
+    section.resume>h1 {
+        top: -2rem;
+        right: 2rem;
+    }
+}
+/*************************************************************************/
+/*Mobile - Listas */
+.resume__container--lista {
+    padding: .5rem;
+    margin: .5rem;
+}
+.resume__container--lista>h2 {
+    color: var(--color-amarillo);
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+.resume__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.resume__item {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    position: relative;
+}
+.resume__item::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: calc(50%);
+    width: 1px;
+    height: calc(100% + 1.2rem);
+    background-color: var(--color-blanco);
+}
+.resume__item::after {
+    content: '';
+    position: absolute;
+    left: calc(1rem - 4.5px);
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-amarillo);
+    border-radius: 50%;
+}
+.resume__item:last-child::before {
+    display: none;
+}
+.resume__ano {
+    font-size: 20px;
+}
+.resume__subcontainer {
+    font-size: 16px;
+}
+.resume__aprendizajeobtenido {
+    margin-top: 5px;
+    font-size: 12px;
+}
+.resume__aprendizaje--experiencia {
+    background-color: var(--color-amarillo);
+    color: #000;
+    margin-left: -1rem;
+}
+.resume__aprendizaje--experiencia>h2 {
+    color: #000;
+}
+.resume__aprendizaje--experiencia .resume__item::after {
+    content: '';
+    background-color: var(--color-azul);
+}
+/*Tablet Vertical - Listas*/
+@media (width > 540px) {
+    .resume__item {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .resume__subcontainer {
+        width: 70%;
+    }
+}
+/*PC - Listas*/
+@media (width > 765px) {
+    .resume__item {
+        flex-direction: column;
+        gap: 0;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .resume__ano {
+        font-size: 18px;
+    }
+    .resume__subcontainer {
+        width: 100%;
+    }
+    .resume__container {
+        width: 50%;
+        max-width: 500px;
+    }
+}
+/*Mobile - Habilidades*/
+.resume__habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resume__table {
+    width: 80%;
+    border-collapse: collapse;
+}
+.resume__tablehead {
+    color: var(--color-amarillo);
+    font-size: 1.4rem;
+}
+.resume__tableheader,
+.resume__tabledata {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ffffffba;
+}
+.resume__habilidades>h2 {
+    color: var(--color-amarillo);
+    margin: 1.5rem;
+    align-self: flex-start;
+}
+.resume_habilidades__list {
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem 2rem;
+    padding: 1rem;
+}
+.resume_habilidades__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resume_habilidades__item img {
+    width: 60px;
+}
+.resume_habilidades__item img:hover {
+    transform: scale(90%);
+    filter: brightness(80%);
+    transition: all .2s ease;
+}
+.resume_habilidades__item p {
+    font-size: 12px;
+}
+@media (width > 540px) {
+    .resume_habilidades__list {
+        padding: 2rem;
+        gap: 1rem 3.5rem;
+    }
+}
+/*PC - Habilidades*/
+@media (width > 765px) {
+    .resume_habilidades__list {
+        padding: 1rem;
+        gap: 1rem 2rem;
+    }
+
+    .resume__habilidades {
+        margin-top: 5rem;
+    }
+}

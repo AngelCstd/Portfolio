@@ -1,0 +1,67 @@
+:root {
+  --color-blanco: #fffbf2;
+  --color-azul: #1e3958;
+  --color-naranja: #e68c38;
+  --color-naranja-oscuro: #ff6d1f;
+  --color-amarillo: #f0b000;
+  --color-negro: #070707;
+  --color-morado: #6633ee;
+  --color-gris-azul: #C8D7D2;
+  --color-gris-claro:#b6b6b6;
+  --color-gris-oscuro:#171717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.2;
+  position: relative;
+  min-height: 100dvh;
+  max-width: 100vw;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blanco);
+}
+
+.button {
+  padding: .7rem 2rem;
+  border-radius: 18px;
+}
+
+.push{
+  transition: transform .3s ease-out;
+}
+
+.push:hover{
+  transform: scale(90%);
+  box-shadow: none;
+}
+
+.push:active{
+  transform: scale(110%);
+}
+
+.buttonPrincipal{
+  background-color: var(--color-naranja-oscuro);
+  box-shadow: 0px 5px 10px #5b5b5b5c;
+}
+
+
+@media (width > 768px) {
+  html{
+      font-size: 18px;
+  }
+}
