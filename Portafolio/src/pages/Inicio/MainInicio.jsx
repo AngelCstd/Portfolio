@@ -20,7 +20,7 @@ export function MainInicio() {
     return (
         <main className="hero" id="home">
             <header className="hero__container">
-                <img className="hero__perfil" src=".Portafolio/src/assets/img/inicio.jpg" />
+                <img className="hero__perfil" src="./Portafolio/src/assets/img/inicio.jpg" />
                 <div className="hero__container--profile">
                     <h1 className="hero__bio">Soy Angel Castañeda!</h1>
                     <h3 className="hero__bio--info">
