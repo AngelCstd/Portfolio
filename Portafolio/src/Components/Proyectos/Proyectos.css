@@ -9,6 +9,7 @@
     border-radius: 16px;
     background: radial-gradient(230% 125% at 50% 20%, var(--color-negro) 10%, var(--color-gris-oscuro) 100%);
     box-shadow: 0px 2px 8px var(--color-gris-azul);
+    padding: 1rem;
 }
 section.proyectos .container {
     max-width: 600px;
@@ -72,9 +73,7 @@ section.proyectos .container h3{
     font-weight: 200;
 }
 @media (width > 465px) {
-    .proyectos {
-        padding: 2rem;
-    }
+
     .botones .button{
         width: 100%;
         max-width: 190px;
@@ -91,8 +90,5 @@ section.proyectos .container h3{
     .proyectos {
         flex-direction: row;
         gap: 1rem;
-    }
-    .fondo__azul {
-        flex-direction: row-reverse;
     }
 }
