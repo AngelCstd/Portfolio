@@ -17,12 +17,8 @@ export function Proyecto({ proyecto }) {
                     })}
                 </ul>
                 <div className="botones">
-                    <button className="button buttonPrincipal push">
-                        <a target="_blank" href={proyecto.aplicacion}>Ir a aplicacion</a>
-                    </button>
-                    <button className="button push buttonSecundario">
-                        <a target="_blank" href={proyecto.repositorio}>Ir a repositorio</a>
-                    </button>
+                        <a target="_blank" className="button push buttonPrincipal" href={proyecto.aplicacion}>Ir a aplicacion</a>
+                        <a target="_blank" className="button push buttonSecundario" href={proyecto.repositorio}>Ir a repositorio</a>
                 </div>
             </div>
             <img src={proyecto.imagen} alt="Muestra de aplicacion en pantalla de telefono" className="pantallaMuestra" />

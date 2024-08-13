@@ -7,7 +7,7 @@
   --color-amarillo: #f0b000;
   --color-negro: #070707;
   --color-morado: #6633ee;
-  --color-gris-azul: #C8D7D2;
+  --color-gris-azul: #747877;
   --color-gris-claro:#b6b6b6;
   --color-gris-oscuro:#171717;
 }
@@ -38,9 +38,11 @@ a {
 }
 
 .button {
+  display: block;
   padding: .6rem 2rem;
   border: none;
   border-radius: 14px;
+  text-align: center;
 }
 
 .push{
@@ -60,13 +62,12 @@ a {
   background-color: var(--color-naranja);
   box-shadow: 0px 5px 10px #5b5b5b5c;
 }
-button.buttonSecundario{
+.buttonSecundario{
   background-color: var(--color-blanco);
   box-shadow: 0px 5px 10px #5b5b5b5c;
-}
-.buttonSecundario a{
   color: var(--color-negro);
 }
+
 /*Texto resaltado*/
 .textNaranja{
   color: var(--letras-naranja);

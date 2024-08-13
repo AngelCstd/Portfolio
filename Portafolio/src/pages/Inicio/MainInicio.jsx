@@ -33,7 +33,7 @@ export function MainInicio() {
                     Tengo <span className="textNaranja">2 años de experiencia</span> en el sector, con tecnologias como <span className="textNaranja">React, NodeJs, TypeScript y JavaScript.</span> He realizado proyectos exitosos para negocios locales y actualmente busco certificarme por parte de <span className="textNaranja">Google en diseño UX</span>
                 </p>
                 <div className="hero__container--network">
-                    <a href="#about" className="button buttonPrincipal push">Contactame</a>
+                    <a href="#contacto" className="button buttonPrincipal push">Contactame</a>
                     <ul className="hero__network">
                         {network.map((obj) => {
                             return (
