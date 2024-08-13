@@ -1,0 +1,4 @@
+section.experiencia{
+    background: radial-gradient(230% 125% at 50% 20%, var(--color-negro) 40%, var(--color-gris-oscuro) 100%);
+    color: var(--color-blanco);
+}

@@ -4,8 +4,7 @@ main.hero {
     background: radial-gradient(230% 125% at 50% -40%, var(--color-gris-oscuro) 40%, var(--color-negro) 100%);
     min-height: 101dvh;
     width: 100%;
-    padding: 1.5rem;
-    padding-top: 3rem;
+    padding: 4rem 1rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,6 +22,7 @@ main.hero {
 }
 header.hero__container{
     gap: .3rem;
+
 }
 /*Imagen de perfil*/
 .hero__perfil {
@@ -51,11 +51,6 @@ header.hero__container{
 .hero__bio--info {
     font-size: 1.3rem;
     font-weight: 400;
-}
-/*Texto resaltado*/
-.textNaranja{
-    color: var(--color-naranja);
-    font-weight: 600;
 }
 /*Texto del parrafo*/
 .hero__parrafo{
@@ -88,24 +83,11 @@ header.hero__container{
 
 /*Tablet - Inicio*/
 @media (width > 470px) {
-    main.hero {
-        padding: 1rem;
-    }
     .hero__perfil {
         margin-right: 1rem;
-    }
-    .hero__container{
-        width: 90%;
     }
     header.hero__container{
         flex-direction: row-reverse;
         justify-content: space-between;
-    }
-}
-
-/*PC - Inicio*/
-@media (width > 768px) {
-    html{
-        font-size: 18px;
     }
 }

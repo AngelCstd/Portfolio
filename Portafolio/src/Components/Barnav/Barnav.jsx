@@ -9,8 +9,8 @@ const links = [
         title:"Inicio"
     },
     {
-        ref: "#about",
-        title:"Sobre mi"
+        ref: "#experiencia",
+        title:"Experiencia"
     },
     {
         ref: "#proyectos",

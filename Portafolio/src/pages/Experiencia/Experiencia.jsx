@@ -1,4 +1,5 @@
 import { Proyecto } from "../../Components/Proyectos/Proyectos.jsx";
+import "./Experiencia.css"
 const proyectos = [
     {
         titulo: "Portafolio",
@@ -42,7 +43,7 @@ const proyectos = [
 
 export function Experiencia() {
     return (
-        <section className="experiencia">
+        <section id="experiencia" className="experiencia">
             {proyectos.map((proyecto)=>{
                 return(
                     <Proyecto proyecto={proyecto}/>

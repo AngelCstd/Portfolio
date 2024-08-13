@@ -1,8 +1,9 @@
 :root {
-  --color-blanco: #fffbf2;
+  --color-blanco: #f5f5f5;
   --color-azul: #1e3958;
-  --color-naranja: #e68c38;
-  --color-naranja-oscuro: #ff6d1f;
+  --letras-naranja: #e68c38;
+  --color-naranja: #ff6d1f;
+  --color-naranja-oscuro: #f04806;
   --color-amarillo: #f0b000;
   --color-negro: #070707;
   --color-morado: #6633ee;
@@ -37,8 +38,9 @@ a {
 }
 
 .button {
-  padding: .7rem 2rem;
-  border-radius: 18px;
+  padding: .6rem 2rem;
+  border: none;
+  border-radius: 14px;
 }
 
 .push{
@@ -55,8 +57,20 @@ a {
 }
 
 .buttonPrincipal{
-  background-color: var(--color-naranja-oscuro);
+  background-color: var(--color-naranja);
   box-shadow: 0px 5px 10px #5b5b5b5c;
+}
+button.buttonSecundario{
+  background-color: var(--color-blanco);
+  box-shadow: 0px 5px 10px #5b5b5b5c;
+}
+.buttonSecundario a{
+  color: var(--color-negro);
+}
+/*Texto resaltado*/
+.textNaranja{
+  color: var(--letras-naranja);
+  font-weight: 600;
 }
 
 

@@ -1,6 +1,6 @@
 /*Mobile - Proyectos*/
 .proyectos {
-    min-height: 80vh;
+    min-height: 80dvh;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -13,11 +13,11 @@ section.proyectos .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.3rem;
 }
-section.proyectos .container>h1{
+section.proyectos .container h3{
     align-self: flex-start;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .tecnologias__list {
     width: 100%;
@@ -28,74 +28,59 @@ section.proyectos .container>h1{
     justify-content: space-around;
     gap: 1rem;
     position: relative;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .tecnologias__list::before{
     content: "Tecnologias usadas:";
     position: absolute;
-    top: -2rem;
-    font-size: 12px;
+    top: -1.5rem;
+    font-size: .8rem;
+    font-weight: 200;
 }
 .tecnologias__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: .2rem;
 }
 .tecnologias__item img{
-    width: 60px;
-}
-.tecnologias__item img:hover{
-    transform: scale(90%);
-    filter: brightness(80%);
-    transition: all .2s ease;
+    width: 50px;
 }
 .tecnologias__item p{
-    font-size: 12px;
+    font-size: .7rem;
 }
 .botones {
-    display: flex;
     width: 100%;
-    max-width: 400px;
-    justify-content: space-around;
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
 }
-.botones a{
-    padding: 1rem;
-    background-color: var(--color-azul);
-    color: var(--color-blanco);
-    border-radius: 20px;
-    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.588);
-    transition: opacity .2s ease, transform .2s ease;
-}
-.botones a:last-child {
-    background-color: var(--color-naranja);
-    color: var(--color-blanco);
-}
-.botones a:hover{
-    transform: scale(90%);
-    opacity: 80%;
+.botones button.button{
+    width: 100%;
 }
 .pantallaMuestra {
     width: 90%;
     max-width: 500px;
     height: auto;
 }
-.fondo__azul {
-    background-color: var(--color-azul);
-    color: var(--color-blanco);
-}
-.fondo__azul .botones a:first-child {
-    background-color: var(--color-blanco);
-    color: var(--color-azul);
+.proyectos .explicacion{
+    color: var(--color-gris-claro);
+    font-weight: 200;
 }
 @media (width > 465px) {
     .proyectos {
         padding: 2rem;
     }
+    .botones button.button{
+        width: 100%;
+        max-width: 190px;
+    }
 }
 @media (width > 765px) {
     .pantallaMuestra{
-        width: 50%;
+        width: 40%;
         max-width: 400px;
     }
     section.proyectos .container {
