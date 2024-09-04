@@ -22,7 +22,6 @@ main.hero {
 }
 header.hero__container{
     gap: .3rem;
-
 }
 /*Imagen de perfil*/
 .hero__perfil {
@@ -60,25 +59,17 @@ header.hero__container{
 }
 /*Contenedor de network*/
 .hero__container--network{
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-}
-/*Lista de redes sociales*/
-.hero__network {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
-}
-.hero__container--network .button{
     width: 80%;
     max-width: 300px;
-    text-align: center;
 }
-.hero__network_item button{
-    background-color: transparent;
-    border: none;
+.hero__container--network .button{
+    width: 100%;
+    text-align: center;
 }
 
 /*Tablet - Inicio*/

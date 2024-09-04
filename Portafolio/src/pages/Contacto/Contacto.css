@@ -1,0 +1,12 @@
+.contacto{
+    background: radial-gradient(230% 125% at 50% 20%, var(--color-negro) 40%, var(--color-gris-oscuro) 100%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.contacto__title{
+    color: var(--color-blanco);
+    font-weight: 600;
+}
