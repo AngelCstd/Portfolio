@@ -7,7 +7,7 @@ export function Contacto() {
     return (
         <section className="page__contacto">
             <section className="contacto">
-            <h1 className="contacto__title" id="contacto">Enviame un mensaje</h1>
+            <h1 className="contacto__title textNaranja" id="contacto">¿Quieres contactarme?</h1>
             <div className="container">
                 <h3>Contactame en
                     <span className="textNaranja"> cualquier momento</span>
