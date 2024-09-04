@@ -11,7 +11,8 @@
     box-shadow: 1px 1px 20px var(--color-naranja);
 }
 .contacto label{
-    font-size: .8rem;
+    font-size: .7rem;
+    text-align: start;
     display: flex;
     flex-direction: column;
     gap: .2rem;

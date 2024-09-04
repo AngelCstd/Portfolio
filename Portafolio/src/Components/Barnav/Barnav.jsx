@@ -10,10 +10,6 @@ const links = [
     },
     {
         ref: "#experiencia",
-        title:"Experiencia"
-    },
-    {
-        ref: "#proyectos",
         title:"Proyectos"
     },
     {

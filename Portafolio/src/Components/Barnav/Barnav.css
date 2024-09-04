@@ -49,7 +49,7 @@ header.menu__header ul {
 }
 
 /*TABLET*/
-@media (width > 470px) {
+@media (width > 510px) {
     /*Desaparecemos iconos*/
     .drawerTrigger {
         display: none;
@@ -61,7 +61,8 @@ header.menu__header ul {
         gap: 1.3rem;
         justify-content: flex-end;
         width: 100%;
-        max-width: 400px;
+        max-width: 300px;
+        justify-content: space-between;
     }
 
 }
@@ -71,7 +72,5 @@ header.menu__header ul {
     header.menu__header{
         padding: 1rem 2rem;
     }
-    header.menu__header ul{
-        justify-content: space-between;
-    }
+
 }
