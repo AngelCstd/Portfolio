@@ -24,8 +24,34 @@ export function FormContact() {
         })
     }
 
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+        const URLZap = "https://hooks.zapier.com/hooks/catch/20013091/2teb6ux/"
+
+        try {
+            const response = await fetch(URLZap, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+
+            console.log(response)
+            if (response.ok) {
+                console.log("Correo enviado con exito")
+            } else {
+                console.log("HUBO ERROR")
+            }
+        }
+        catch (error) {
+            console.error("Error: ", error)
+        }
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>
                 Nombre:
                 <input
