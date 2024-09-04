@@ -1,0 +1,13 @@
+/*Lista de redes sociales*/
+.hero__network {
+    align-self: center;
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.hero__network_item button{
+    background-color: transparent;
+    border: none;
+}
