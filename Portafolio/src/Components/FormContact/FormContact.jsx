@@ -1,13 +1,18 @@
+import { Aviso } from "../Aviso/Aviso.jsx";
 import { useState } from "react";
 import "./FormContact.css"
 
 export function FormContact() {
-
+    let [aviso, setAviso] = useState(false)
     let [formData, setFormData] = useState({
         name: "",
         email: "",
         mensaje: ""
     })
+
+    const handleAviso = () => {
+        setAviso(!aviso)
+    }
 
     const onChange = (e) => {
         setFormData({
@@ -26,24 +31,19 @@ export function FormContact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-
-        const URLZap = "https://hooks.zapier.com/hooks/catch/20013091/2teb6ux/"
+        const URLZap = import.meta.env.VITE_REACT_APP_URL
 
         try {
             const response = await fetch(URLZap, {
                 method: "POST",
+                mode: "no-cors",
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData)
             })
-
-            console.log(response)
-            if (response.ok) {
-                console.log("Correo enviado con exito")
-            } else {
-                console.log("HUBO ERROR")
-            }
+            handleReset()
+            handleAviso()
         }
         catch (error) {
             console.error("Error: ", error)
@@ -51,46 +51,49 @@ export function FormContact() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Nombre:
-                <input
-                    type="text"
-                    name="name"
-                    onChange={onChange}
-                    value={formData.name}
-                    placeholder="Ingresa tu nombre..."
-                    required />
-            </label>
-            <label>
-                Correo:
-                <input
-                    type="email"
-                    name="email"
-                    onChange={onChange}
-                    value={formData.email}
-                    autoComplete="username"
-                    placeholder="Ingresa tu correo..."
-                    required />
-            </label>
-            <label>
-                Mensaje:
-                <textarea
-                    name="mensaje"
-                    onChange={onChange}
-                    value={formData.mensaje}
-                    placeholder="Ingresa tu mensaje..." />
-            </label>
-            <button
-                type="submit"
-                className="button buttonPrincipal">
-                Enviar
-            </button>
-            <button type="button"
-                className="button buttonSecundario"
-                onClick={handleReset}>
-                Reset
-            </button>
-        </form>
+        <>
+            {aviso && <Aviso onClose={handleAviso}/>}
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Nombre:
+                    <input
+                        type="text"
+                        name="name"
+                        onChange={onChange}
+                        value={formData.name}
+                        placeholder="Ingresa tu nombre..."
+                        required />
+                </label>
+                <label>
+                    Correo:
+                    <input
+                        type="email"
+                        name="email"
+                        onChange={onChange}
+                        value={formData.email}
+                        autoComplete="username"
+                        placeholder="Ingresa tu correo..."
+                        required />
+                </label>
+                <label>
+                    Mensaje:
+                    <textarea
+                        name="mensaje"
+                        onChange={onChange}
+                        value={formData.mensaje}
+                        placeholder="Ingresa tu mensaje..." />
+                </label>
+                <button
+                    type="submit"
+                    className="button buttonPrincipal">
+                    Enviar
+                </button>
+                <button type="button"
+                    className="button buttonSecundario"
+                    onClick={handleReset}>
+                    Reset
+                </button>
+            </form>
+        </>
     )
 }

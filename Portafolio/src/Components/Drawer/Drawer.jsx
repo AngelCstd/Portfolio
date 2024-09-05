@@ -45,13 +45,12 @@ export function DrawerP({ onClose, links }) {
                     <span></span>
                 </div>
                 <ul className="drawer__ul" id="menu">
-                    {links.map(obj=>{
-                        return(<li key={obj.ref + Math.random()*100} className="drawer__li">
+                    {links.map(obj => {
+                        return (<li key={obj.ref + Math.random() * 100} className="drawer__li">
                             <a className="drawer__a" onClick={handleClose} href={obj.ref} >{obj.title}</a>
                         </li>)
                     })}
                 </ul>
             </div>
-
         </div>)
 }

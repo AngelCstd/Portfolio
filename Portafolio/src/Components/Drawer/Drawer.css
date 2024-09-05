@@ -7,6 +7,9 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .active{
     opacity: 1;
